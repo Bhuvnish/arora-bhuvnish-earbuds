@@ -22,7 +22,7 @@ model-viewer {
 
 .HotspotAnnotation {
   visibility: hidden;
-  background: #fff;
+  background: #f1f1f1;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   color: rgba(0, 0, 0, 0.8);
@@ -32,7 +32,8 @@ model-viewer {
   font-weight: 700;
   left: calc(100% + 1em);
   max-width: 300px;
-  background-color: #4285f4;
+  align-items: center;
+  text-align: center;
   
   padding: 0.5em 1em;
   position: absolute;
@@ -44,22 +45,22 @@ model-viewer {
 .yo p {
   
   height: fit-content;
-  width: 400px;
-  font-size: 20px;
+  width: fit-content;
+  font-size: 14px;
   margin: 0px;
   padding-top: opx;
 }
 
 .yo h2{
-  
-  height: 60px;
-  width: 100px;
+   font-size: 16px;
+ 
+
 }
 
 .HotspotAnnotation p {
   color: #333;
 
- background-color: #4285f4;
+
 }
 
 .HotspotAnnotation h2 {
@@ -69,7 +70,7 @@ model-viewer {
 
 model-viewer::part(default-progress-bar) {
   height: 30px;
-  background-color: #E89B36;
+  background-color: #e61f00;
 }
 
 /* AR Rules */
@@ -144,14 +145,7 @@ model-viewer > #ar-prompt > img {
 
 #founders section {
   margin-bottom: 40px;
-}
-
-
-#body {
- 
-  margin-top: 300px;
-}
-/*# sourceMappingURL=main.css.map *
+}/*# sourceMappingURL=main.css.map *
 
 
 
