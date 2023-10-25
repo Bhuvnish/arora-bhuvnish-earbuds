@@ -1,5 +1,6 @@
 # arora_bhuvnish_earbuds
- 
+Introducing  new earbuds  . which have a  lots of features like touch pannel ,noice cancelation and this earbuds come in  titanium body which make its  scratchproof
+and rigid.
 
 ## Contributing
 1. Fork it!
