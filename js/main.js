@@ -4,11 +4,28 @@
   const model = document.querySelector("#model");
   const hotspots = document.querySelectorAll(".Hotspot");
 
-  const InfoBoxes = [{
-       title: "Noise-cancelling microphones",
-       text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
-       image: "../images/hotspot.svg"
- }]
+  const infoBoxes = [
+    {
+      title: "Noise-cancelling microphones",
+      text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
+      image: "images/copperinsulation.jpg",
+    },
+    {
+      title: "Comfortable fit",
+      text: "Three pairs of ultra comfortable silicone tips are included. The tips create an acoustic seal that blocks outside audio and secures the earbuds in place.",
+      image: "images/comfortablefit.jpg",
+    },
+    {
+      title: "360 Audio",
+      text: "360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience.",
+      image: "images/360audio.jpg",
+    },
+    {
+      title: "Ultra Fast Charging",
+      text: "Charge your earbuds in 30 minutes or less with our hyper charging technology.",
+      image: "images/fastcharging.jpg",
+    },
+  ];
 
   //functions
   function modelLoaded() {
@@ -18,28 +35,26 @@
     });
   }
 
+
+
+
   function loadInfo() {
-    
-    InfoBoxes.forEach((infoBox, index)=>{
-      let selected = document.querySelector(`hotspot-${index + 1}`);
-      console.log(selected);
-      //document.createElement('h2'):
-      //textContent = infoBox.title
+    infoBoxes.forEach((infoBox, index) => {
+      const selected = document.querySelector(`#hotspot-${index + 1}`);
+      
+      const h2 = document.createElement('h2');
+      h2.textContent = infoBox.title;
 
+      const p = document.createElement('p');
+      p.textContent = infoBox.text;
+      selected.appendChild(h2);
 
-      //document.createElement('p'):
-      //textContent = infoBox.text
+      selected.appendChild(p);
 
-
-      // console.log(infoBox.title);
-      // console.log(infoBox.text);
-
-
-      // selected.appendChild();
-      // selected.appendChild();
-    })
-    //let selected = document.querySelector(`#hotspot-${a dynamic number}`)
+    });
   }
+  
+
   loadInfo();
 
   function showInfo() {
@@ -65,5 +80,3 @@
     hotspot.addEventListener("mouseout", hideInfo);
   });
 })();
-
-// In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
